@@ -64,7 +64,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 823
   m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3246,7 +3246,6 @@ GameObject:
   - component: {fileID: 3742980556331905754}
   - component: {fileID: 7051795919525887631}
   - component: {fileID: -1984420582426034850}
-  - component: {fileID: 6636667601347525331}
   - component: {fileID: -7464140782469655415}
   - component: {fileID: 8136836974029535765}
   - component: {fileID: 990687987}
@@ -3292,7 +3291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   m_AssetId: 
-  m_SceneId: 1636035673
+  m_SceneId: 370126679
 --- !u!114 &7051795919525887631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3308,12 +3307,14 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   componentsToDisable:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 990687986}
+  - {fileID: 4676660329344585598}
+  - {fileID: 7719149473806304702}
+  - {fileID: 6208250347223176609}
+  - {fileID: 1613336550}
   remoteLayerName: RemotePlayer
+  dontDrawLayerName: DontDraw
+  playerGraphics: {fileID: 6557981525052901100}
 --- !u!114 &-1984420582426034850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,22 +3330,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   compressRotation: 1
---- !u!114 &6636667601347525331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8896152083632010573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734b48bea0b204338958ee3d885e11f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  compressRotation: 1
-  target: {fileID: 8896152083632010561}
 --- !u!114 &-7464140782469655415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3378,7 +3363,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.001
   animator: {fileID: 760121837464888214}
-  clientAuthority: 1
+  clientAuthority: 0
 --- !u!54 &990687987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3440,7 +3425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246de6fd7336ce04f908353d27fbf6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   lookSensitivity: 3
 --- !u!136 &1380556151833857533
 CapsuleCollider:

@@ -10,6 +10,11 @@ public class PlayerSetup : NetworkBehaviour
     [SerializeField]
     string remoteLayerName = "RemotePlayer";
 
+    [SerializeField]
+    string dontDrawLayerName = "DontDraw";
+    [SerializeField]
+    GameObject playerGraphics;
+
     Camera sceneCamera;
 
     private void Start()
@@ -28,9 +33,22 @@ public class PlayerSetup : NetworkBehaviour
             {
                 sceneCamera.gameObject.SetActive(false);
             }
+
+            //Disable player graphics for local player
+            SetLayerRecursively(playerGraphics, LayerMask.NameToLayer(dontDrawLayerName));
         }
 
         GetComponent<PlayerManager>().Setup();
+    }
+
+    void SetLayerRecursively(GameObject obj, int newLayer)
+    {
+        obj.layer = newLayer;
+
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, newLayer);
+        }
     }
 
     //This is called every time a player is setup locally

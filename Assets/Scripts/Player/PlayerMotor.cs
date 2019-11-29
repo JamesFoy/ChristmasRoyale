@@ -59,6 +59,7 @@ public class PlayerMotor : MonoBehaviour
     //Perfrom rotation
     void PerformRotation()
     {
+        Debug.Log("Motor rotates " + rotation);
         rb.MoveRotation(transform.rotation * Quaternion.Euler(rotation));
         if (cam != null)
         {

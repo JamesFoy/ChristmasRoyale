@@ -32,23 +32,32 @@ public class PlayerController : MonoBehaviour
         Vector3 _velocity = (_movHorizontal + _movVertical) * speed;
 
         //Animate movement
-        anim.SetFloat("ForwardVelocity", _zMov);
+        anim.SetFloat("ForwardVelocity", _zMov, 1f, Time.deltaTime * 10f);
+        anim.SetFloat("Sideways", _xMov, 1f, Time.deltaTime * 10f);
 
         //Apply movement
         motor.Move(_velocity);
 
         //Calculate rotation as a 3D vector (turning around)
-        float _yRot = Input.GetAxisRaw("Mouse X");
+        float _yRot = Input.GetAxis("Mouse X");
+        Debug.Log("look y rotates " + _yRot);
+
 
         Vector3 _rotation = new Vector3(0f, _yRot, 0f) * lookSensitivity;
+
+        lookSensitivity = 5;
+        Debug.Log("look sensitivity rotates " + lookSensitivity);
+        Debug.Log("controller rotates " + _rotation);
 
         //Apply rotation
         motor.Rotate(_rotation);
 
         //Calculate camera rotation as a 3D vector (looking Up/Down)
-        float _xRot = Input.GetAxisRaw("Mouse Y");
+        float _xRot = Input.GetAxis("Mouse Y");
 
         float _cameraRotationX = _xRot * lookSensitivity;
+
+
 
         //Apply camera rotation
         motor.RotateCamera(_cameraRotationX);
