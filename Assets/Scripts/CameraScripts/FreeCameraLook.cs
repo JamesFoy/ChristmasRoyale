@@ -41,8 +41,6 @@ public class FreeCameraLook : Pivot {
 
 		cam = GetComponentInChildren<Camera>().transform;
 		pivot = cam.parent.parent; //take the correct pivot
-
-        Instantiate(player, null);
 	}
 
     protected override void Start()

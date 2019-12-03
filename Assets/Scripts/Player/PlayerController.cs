@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using RootMotion.FinalIK;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(PlayerMotor))]
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private float lookSensitivity = 3f;
 
     private Animator anim;
+
+    public AimIK aimIk;
 
     private PlayerMotor motor;
 
@@ -61,5 +64,15 @@ public class PlayerController : MonoBehaviour
 
         //Apply camera rotation
         motor.RotateCamera(_cameraRotationX);
+    }
+
+    public void IKOff()
+    {
+        aimIk.enabled = false;
+    }
+
+    public void IKOn()
+    {
+        aimIk.enabled = true;
     }
 }

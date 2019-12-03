@@ -66,7 +66,7 @@ public class PlayerMotor : MonoBehaviour
             //Set rotation
             currentCameraRotationX -= cameraRotationX;
             //Clamp rotation
-            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
+            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -80, 45);
 
             //Apply rotation to the transform of the camera
             cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0, 0);

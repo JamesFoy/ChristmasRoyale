@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Mirror;
+using RootMotion.FinalIK;
 
 public class PlayerShoot : NetworkBehaviour
 {
