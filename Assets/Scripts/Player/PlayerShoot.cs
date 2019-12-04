@@ -8,11 +8,16 @@ public class PlayerShoot : NetworkBehaviour
 
     public PlayerWeapon weapon;
 
+    public float bulletSpeed;
+
     [SerializeField]
     private Camera cam;
 
     [SerializeField]
     private LayerMask mask;
+
+    [SerializeField]
+    private Transform bulletSpawn;
 
     private void Start()
     {
@@ -34,23 +39,7 @@ public class PlayerShoot : NetworkBehaviour
     [Client]
     private void Shoot()
     {
-        RaycastHit _hit;
-
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, weapon.range, mask))
-        {
-            if (_hit.collider.tag == PLAYER_TAG)
-            {
-                CmdPlayerShot(_hit.collider.name, weapon.damage);
-            }
-        }
-    }
-
-    [Command]
-    void CmdPlayerShot(string _playerID, int _damage)
-    {
-        Debug.Log(_playerID + " has been shot");
-
-        PlayerManager _player = GameManager.GetPlayer(_playerID);
-        _player.RpcTakeDamage(_damage);
+        GameObject _bullet = Instantiate(weapon.Bullet, bulletSpawn.position, bulletSpawn.rotation);
+        _bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.transform.forward * bulletSpeed, ForceMode.Acceleration);
     }
 }

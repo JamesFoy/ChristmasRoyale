@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &68585114711497473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6122463130029728249}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6122463130029728249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68585114711497473}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.000000014901161}
+  m_LocalPosition: {x: -0.101, y: 0.437, z: -0.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5928779124034965572}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
 --- !u!1 &2723730810333404588
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,7 +3416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   m_AssetId: 
-  m_SceneId: 281391019
+  m_SceneId: 0
 --- !u!114 &7051795919525887631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3555,10 +3585,14 @@ MonoBehaviour:
     name: Ak-47
     damage: 10
     range: 100
+    Bullet: {fileID: 6809824871032862281, guid: 30d883af5835e5e4eb23a31af0e7066b,
+      type: 3}
+  bulletSpeed: 5000
   cam: {fileID: 7719149473806304702}
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
+  bulletSpawn: {fileID: 6122463130029728249}
 --- !u!114 &7338139567313556017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4146,7 +4180,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c24d8b4d459c6b547a1e8a2aeb00cb02,
         type: 3}
       propertyPath: m_Name
-      value: flamethrower_long
+      value: IceShooter
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c24d8b4d459c6b547a1e8a2aeb00cb02,
         type: 3}
