@@ -7,11 +7,14 @@ public class ToggleEvent : UnityEvent<bool> { }
 
 public class Player : NetworkBehaviour
 {
+    [SyncVar (hook = "OnPresentCollected")] public bool hasPresent;
+
     [SerializeField] ToggleEvent onToggleShared;
     [SerializeField] ToggleEvent onToggleLocal;
     [SerializeField] ToggleEvent onToggleRemote;
     [SerializeField] float respawnTime = 5f;
 
+    [SerializeField] GameObject present;
     GameObject mainCamera;
     NetworkAnimator anim;
 
@@ -73,6 +76,13 @@ public class Player : NetworkBehaviour
             //PlayerCanvas.canvas.WriteGameStatusText ("You Died!");
             //PlayerCanvas.canvas.PlayDeathAudio();
 
+            //Drop Present if the player hasPresent was true;
+            if (hasPresent)
+            {
+                OnPresentCollected(false);
+                present.GetComponent<PresentCollect>().SetPresentPosition(this.gameObject.transform.position);
+            }
+
             anim.SetTrigger("Died");
         }
 
@@ -93,5 +103,14 @@ public class Player : NetworkBehaviour
         }
 
         EnablePlayer();
+    }
+
+    public void OnPresentCollected(bool value)
+    {
+        hasPresent = value;
+        if (isLocalPlayer)
+        {
+            //Display UI icon
+        }
     }
 }

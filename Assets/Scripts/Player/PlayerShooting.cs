@@ -37,7 +37,7 @@ public class PlayerShooting : NetworkBehaviour
 
         ellaspedTime += Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire1") && ellaspedTime > shotCooldown)
+        if (Input.GetButton("Fire1") && ellaspedTime > shotCooldown)
         {
             ellaspedTime = 0f;
             CmdFireShot(firePosition.position, firePosition.forward);
