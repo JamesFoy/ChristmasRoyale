@@ -10,14 +10,28 @@ public class Player : NetworkBehaviour
     [SerializeField] ToggleEvent onToggleShared;
     [SerializeField] ToggleEvent onToggleLocal;
     [SerializeField] ToggleEvent onToggleRemote;
+    [SerializeField] float respawnTime = 5f;
 
     GameObject mainCamera;
+    NetworkAnimator anim;
 
     private void Start()
     {
+        anim = GetComponent<NetworkAnimator>();
         mainCamera = Camera.main.gameObject;
 
         EnablePlayer();
+    }
+
+    private void Update()
+    {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        anim.animator.SetFloat("Speed", Input.GetAxis("Vertical"));
+        anim.animator.SetFloat("Strafe", Input.GetAxis("Horizontal"));
     }
 
     void DisablePlayer()
@@ -27,6 +41,7 @@ public class Player : NetworkBehaviour
         if (isLocalPlayer)
         {
             mainCamera.SetActive(true);
+            //PlayerCanvas.canvas.HideReticule();
             onToggleLocal.Invoke(false);
         }
         else
@@ -42,11 +57,41 @@ public class Player : NetworkBehaviour
         if (isLocalPlayer)
         {
             mainCamera.SetActive(false);
+            //PlayerCanvas.canvas.Initialize();
             onToggleLocal.Invoke(true);
         }
         else
         {
             onToggleRemote.Invoke(true);
         }
+    }
+
+    public void Die()
+    {
+        if (isLocalPlayer)
+        {
+            //PlayerCanvas.canvas.WriteGameStatusText ("You Died!");
+            //PlayerCanvas.canvas.PlayDeathAudio();
+
+            anim.SetTrigger("Died");
+        }
+
+        DisablePlayer();
+
+        Invoke("Respawn", respawnTime);
+    }
+
+    void Respawn()
+    {
+        if (isLocalPlayer)
+        {
+            Transform spawn = NetworkManager.singleton.GetStartPosition();
+            transform.position = spawn.position;
+            transform.rotation = spawn.rotation;
+
+            anim.SetTrigger("Restart");
+        }
+
+        EnablePlayer();
     }
 }
