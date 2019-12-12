@@ -1,19 +1,32 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class PresentCollect : MonoBehaviour
 {
-    [SerializeField] UnityEvent onCollectedPresent;
-    [SerializeField] UnityEvent onDroppedPresent;
+    private Vector3 offset = new Vector3(0, 0.2f, 0);
+    private static PresentCollect instance;
 
-    public enum PresentState { notCollected, isCollected, hasDropped };
+    [SerializeField] UnityEvent onCollectedPresent;
+    [SerializeField] public UnityEvent onDroppedPresent;
+    [SerializeField] UnityEvent onPlantedPresent;
+
+    public static PresentCollect Instance {get { return instance; } }
+
+    public enum PresentState { notCollected, isCollected, hasDropped, planted };
     public PresentState presentState = PresentState.notCollected;
 
-
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
@@ -21,14 +34,18 @@ public class PresentCollect : MonoBehaviour
     {
         if (presentState == PresentState.isCollected)
         {
-            Debug.Log("Present Collected");
             onCollectedPresent.Invoke();
+        }
+
+        if (presentState == PresentState.hasDropped || presentState == PresentState.planted)
+        {
+            onDroppedPresent.Invoke();
         }
     }
 
-    public void SetPresentPosition(Vector3 dropPoint)
+    public void SetPresentPosition(Transform dropPoint)
     {
-        transform.position = dropPoint;
+        this.gameObject.transform.position = dropPoint.position + offset;
     }
 }
 

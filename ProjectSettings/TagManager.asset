@@ -8,6 +8,7 @@ TagManager:
   - RedSpawn
   - Animal
   - Present
+  - Tree
   layers:
   - Default
   - TransparentFX

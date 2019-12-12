@@ -14,7 +14,7 @@ public class Player : NetworkBehaviour
     [SerializeField] ToggleEvent onToggleRemote;
     [SerializeField] float respawnTime = 5f;
 
-    [SerializeField] GameObject present;
+    PresentCollect presentCollect;
     GameObject mainCamera;
     NetworkAnimator anim;
 
@@ -22,6 +22,7 @@ public class Player : NetworkBehaviour
     {
         anim = GetComponent<NetworkAnimator>();
         mainCamera = Camera.main.gameObject;
+        presentCollect = PresentCollect.Instance;
 
         EnablePlayer();
     }
@@ -76,14 +77,15 @@ public class Player : NetworkBehaviour
             //PlayerCanvas.canvas.WriteGameStatusText ("You Died!");
             //PlayerCanvas.canvas.PlayDeathAudio();
 
-            //Drop Present if the player hasPresent was true;
-            if (hasPresent)
-            {
-                OnPresentCollected(false);
-                present.GetComponent<PresentCollect>().SetPresentPosition(this.gameObject.transform.position);
-            }
-
             anim.SetTrigger("Died");
+        }
+
+        //Drop Present if the player hasPresent was true;
+        if (hasPresent)
+        {
+            presentCollect.SetPresentPosition(transform);
+            presentCollect.presentState = PresentCollect.PresentState.hasDropped;
+            OnPresentCollected(false);
         }
 
         DisablePlayer();

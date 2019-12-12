@@ -13,6 +13,7 @@ public class PlayerInteraction : NetworkBehaviour
     void Start()
     {
         player = GetComponent<Player>();
+        presentCollect = PresentCollect.Instance;
     }
 
     // Update is called once per frame
@@ -21,14 +22,32 @@ public class PlayerInteraction : NetworkBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Present"))
         {
-            presentCollect = other.gameObject.GetComponent<PresentCollect>();
-            presentCollect.presentState = PresentCollect.PresentState.isCollected;
+            if (presentCollect.presentState != PresentCollect.PresentState.planted)
+            {
+                presentCollect.presentState = PresentCollect.PresentState.isCollected;
 
-            player.OnPresentCollected(true);
+                player.OnPresentCollected(true);
+            }
+        }
+        
+        if (other.gameObject.CompareTag("Tree") && player.hasPresent)
+        {
+            //Display UI Info
+
+            //Press Interation key to plant present
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                //Plant bomb
+                Debug.Log(presentCollect.presentState);
+                presentCollect.SetPresentPosition(player.transform);
+                presentCollect.presentState = PresentCollect.PresentState.planted;
+
+                player.OnPresentCollected(false);
+            }
         }
     }
 }
