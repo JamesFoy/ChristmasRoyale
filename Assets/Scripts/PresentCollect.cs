@@ -13,6 +13,8 @@ public class PresentCollect : MonoBehaviour
 
     public static PresentCollect Instance {get { return instance; } }
 
+    public float timerCountdown;
+
     public enum PresentState { notCollected, isCollected, hasDropped, planted };
     public PresentState presentState = PresentState.notCollected;
 
@@ -41,6 +43,18 @@ public class PresentCollect : MonoBehaviour
         {
             onDroppedPresent.Invoke();
         }
+
+        if (presentState == PresentState.planted)
+        {
+            //Start Countdown
+            StartCoroutine(PresentCountDown(timerCountdown));
+        }
+    }
+
+    IEnumerator PresentCountDown(float timer)
+    {
+        //When Countdown ends play explosion effect
+        yield return new WaitForSeconds(timer);
     }
 
     public void SetPresentPosition(Transform dropPoint)

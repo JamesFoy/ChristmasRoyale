@@ -42,6 +42,8 @@ public class PlayerInteraction : NetworkBehaviour
                 presentCollect.SetPresentPosition(player.transform);
                 presentCollect.presentState = PresentCollect.PresentState.planted;
 
+                playerCanvas.IsBombInZone(false);
+
                 player.OnPresentCollected(false);
             }
         }
@@ -49,7 +51,7 @@ public class PlayerInteraction : NetworkBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Tree") && player.hasPresent)
+        if (other.gameObject.CompareTag("Tree"))
         {
             playerCanvas.IsBombInZone(false);
         }

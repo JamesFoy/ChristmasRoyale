@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4928842765232216475
 Transform:
   m_ObjectHideFlags: 0
@@ -4882,7 +4882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4928943000042562099
 Transform:
   m_ObjectHideFlags: 0
@@ -5465,7 +5465,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -9795,8 +9795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverOnly: 0
-  m_AssetId: 4bf3d7b336c942f4ea67886102c0b08d
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 4122773586
 --- !u!114 &1686733135
 MonoBehaviour:
   m_ObjectHideFlags: 0

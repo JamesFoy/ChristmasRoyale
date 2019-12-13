@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8482049756406215269}
   - component: {fileID: 2777245678970867356}
   - component: {fileID: 8296172669022167316}
-  - component: {fileID: 1002538116}
   m_Layer: 0
   m_Name: ChristmasTree
   m_TagString: Tree
@@ -95,24 +94,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -4808832768421775802, guid: 784a51fdaaf6ec2418400eb353cef0f6, type: 3}
---- !u!114 &1002538116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4518821505531787840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serverOnly: 0
-  m_AssetId: 93531723bda6d164b85c4a5850224a22
-  m_SceneId: 0
 --- !u!1 &7187804849952206686
 GameObject:
   m_ObjectHideFlags: 0
