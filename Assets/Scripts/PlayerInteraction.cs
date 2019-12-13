@@ -2,24 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using UnityEngine.Events;
 
 public class PlayerInteraction : NetworkBehaviour
 {
     PresentCollect presentCollect;
     Player player;
+    PlayerCanvas playerCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Player>();
         presentCollect = PresentCollect.Instance;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        playerCanvas = PlayerCanvas.Instance;
     }
 
     private void OnTriggerStay(Collider other)
@@ -37,6 +32,7 @@ public class PlayerInteraction : NetworkBehaviour
         if (other.gameObject.CompareTag("Tree") && player.hasPresent)
         {
             //Display UI Info
+            playerCanvas.IsBombInZone(true);
 
             //Press Interation key to plant present
             if (Input.GetKeyDown(KeyCode.F))
@@ -48,6 +44,14 @@ public class PlayerInteraction : NetworkBehaviour
 
                 player.OnPresentCollected(false);
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Tree") && player.hasPresent)
+        {
+            playerCanvas.IsBombInZone(false);
         }
     }
 }
