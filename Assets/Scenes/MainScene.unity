@@ -774,10 +774,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Roof_02_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 112090, guid: 921c953fe34412c4aa79f7c813bd4e2c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 491252, guid: 921c953fe34412c4aa79f7c813bd4e2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.239563
@@ -1042,10 +1038,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_03_Snow (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 129370, guid: c1c1c56cea7dc2a42bda98e57ed0a700, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 414438, guid: c1c1c56cea7dc2a42bda98e57ed0a700, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.008575
@@ -1200,16 +1192,16 @@ MonoBehaviour:
     m_Bits: 8192
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 3
+  antialiasingMode: 2
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
-    quality: 2
+    quality: 1
   fastApproximateAntialiasing:
-    fastMode: 0
+    fastMode: 1
     keepAlpha: 0
   fog:
     enabled: 1
@@ -2052,10 +2044,6 @@ PrefabInstance:
     - target: {fileID: 161764, guid: f710ef7eabd9cf04e8641a7388d5b364, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Long_Door_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 161764, guid: f710ef7eabd9cf04e8641a7388d5b364, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415048, guid: f710ef7eabd9cf04e8641a7388d5b364, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3697,10 +3685,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Base_Long_Door_02_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 173448, guid: 98840a50ba9afab4ba1df1883f871ce2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 480172, guid: 98840a50ba9afab4ba1df1883f871ce2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.52858
@@ -3883,6 +3867,11 @@ PrefabInstance:
     - target: {fileID: 433376, guid: c991633e88cc3df4c81a2bda12bd262c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 88.077
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154674213518285266, guid: c991633e88cc3df4c81a2bda12bd262c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c991633e88cc3df4c81a2bda12bd262c, type: 3}
@@ -4415,10 +4404,6 @@ PrefabInstance:
     - target: {fileID: 146644, guid: 181f79bd0f89f2b47a74c43c86d7bf94, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Wheel_Barrow_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 146644, guid: 181f79bd0f89f2b47a74c43c86d7bf94, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 475272, guid: 181f79bd0f89f2b47a74c43c86d7bf94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4967,10 +4952,6 @@ PrefabInstance:
     - target: {fileID: 171902, guid: 180b1edafda7d104b9de8875d7a3744a, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Guard_Tower_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 171902, guid: 180b1edafda7d104b9de8875d7a3744a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 479778, guid: 180b1edafda7d104b9de8875d7a3744a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6849,10 +6830,6 @@ PrefabInstance:
     - target: {fileID: 124940, guid: b2c17946abbfa74438665d416ccc234a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Barrel_Half_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 124940, guid: b2c17946abbfa74438665d416ccc234a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 483328, guid: b2c17946abbfa74438665d416ccc234a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8919,6 +8896,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 6184237366804422112, guid: 346d2a1b4aa86de4889f01fab83d8e95,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
 --- !u!4 &622224115 stripped
@@ -9438,10 +9420,6 @@ PrefabInstance:
     - target: {fileID: 177358, guid: 0256e15017e583743a23c01986dcef04, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Door_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 177358, guid: 0256e15017e583743a23c01986dcef04, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 419396, guid: 0256e15017e583743a23c01986dcef04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10928,10 +10906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Crate_Base_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 124860, guid: 86c8491757ffb72489c2e992a8ea267a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 491680, guid: 86c8491757ffb72489c2e992a8ea267a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61.70822
@@ -11121,6 +11095,11 @@ PrefabInstance:
     - target: {fileID: 402186, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184237366804422112, guid: 346d2a1b4aa86de4889f01fab83d8e95,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
@@ -11410,10 +11389,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1283117509081667173, guid: 53242bd82952d0b41a5611675887d89c,
-        type: 3}
-      propertyPath: gameTimer
-      value: 10
+    - target: {fileID: 1511609723, guid: 53242bd82952d0b41a5611675887d89c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511609721, guid: 53242bd82952d0b41a5611675887d89c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047170296, guid: 53242bd82952d0b41a5611675887d89c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047170302, guid: 53242bd82952d0b41a5611675887d89c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53242bd82952d0b41a5611675887d89c, type: 3}
@@ -11850,6 +11840,10 @@ PrefabInstance:
     - target: {fileID: 483016, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483016, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0431672
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
@@ -13627,10 +13621,6 @@ PrefabInstance:
     - target: {fileID: 105982, guid: 251acd7fa17a5054e9b8b4711a516470, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Stall_Cover_01_Snow (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 105982, guid: 251acd7fa17a5054e9b8b4711a516470, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447770, guid: 251acd7fa17a5054e9b8b4711a516470, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17913,10 +17903,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Seat_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 170962, guid: e578a929156e8cb44806200fc6d68068, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 498592, guid: e578a929156e8cb44806200fc6d68068, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.898575
@@ -19104,10 +19090,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Bench_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 131582, guid: c304739a8731e6140ba088e0f6bdf66c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 408250, guid: c304739a8731e6140ba088e0f6bdf66c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62.24858
@@ -19592,10 +19574,6 @@ PrefabInstance:
     - target: {fileID: 146754, guid: 7b276fe82e3e0654a93729505bb6b299, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fish_Rack_02_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 146754, guid: 7b276fe82e3e0654a93729505bb6b299, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 480912, guid: 7b276fe82e3e0654a93729505bb6b299, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20616,10 +20594,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Village_Entrance_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 127166, guid: 9034af8f0f660e0469964bb5c38c5efe, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 448776, guid: 9034af8f0f660e0469964bb5c38c5efe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72.038574
@@ -21595,6 +21569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 483016, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9805366
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
 --- !u!4 &1236153311 stripped
@@ -22052,10 +22030,6 @@ PrefabInstance:
     - target: {fileID: 128074, guid: 8e53b1db85d033b4da99dda676888ef1, type: 3}
       propertyPath: m_Name
       value: SM_Env_Stone_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 128074, guid: 8e53b1db85d033b4da99dda676888ef1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 456208, guid: 8e53b1db85d033b4da99dda676888ef1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24048,10 +24022,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_04_Snow (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 165964, guid: f50dcb201f31ac2498a00e247a723706, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 444238, guid: f50dcb201f31ac2498a00e247a723706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.698578
@@ -24114,10 +24084,6 @@ PrefabInstance:
     - target: {fileID: 175030, guid: 1f9ce3a84faaa624492243994a459aba, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 175030, guid: 1f9ce3a84faaa624492243994a459aba, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 462770, guid: 1f9ce3a84faaa624492243994a459aba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25334,6 +25300,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 3154674213518285266, guid: c991633e88cc3df4c81a2bda12bd262c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c991633e88cc3df4c81a2bda12bd262c, type: 3}
 --- !u!4 &1481089641 stripped
@@ -25573,10 +25544,6 @@ PrefabInstance:
     - target: {fileID: 196922, guid: 8026a13f6cff5e34ebf235fbcc57e81d, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crate_Lid_01_Snow
-      objectReference: {fileID: 0}
-    - target: {fileID: 196922, guid: 8026a13f6cff5e34ebf235fbcc57e81d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 412606, guid: 8026a13f6cff5e34ebf235fbcc57e81d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26220,6 +26187,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1567016718}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1567016720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173668, guid: bd5357f5e35f00e4388439be30d1c8bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1567016718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1567016721
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567016720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 093171353f64feb40aa2b7673fa31b72, type: 3}
 --- !u!4 &1568819679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6347025588577991344, guid: cc50d6aba55e38143af95655f9fd2028,
@@ -26304,10 +26291,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Stone_Statue_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 103492, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 452922, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.33858
@@ -26351,18 +26334,6 @@ PrefabInstance:
     - target: {fileID: 452922, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452922, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.4879014
-      objectReference: {fileID: 0}
-    - target: {fileID: 452922, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.4879
-      objectReference: {fileID: 0}
-    - target: {fileID: 452922, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.4879014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94383b27c74d02f4cb0b6a60855e76a9, type: 3}
@@ -27268,10 +27239,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Tower_Stone_Base_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 130268, guid: 5549d9de43cc65b44ab490572cc13dc2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 473718, guid: 5549d9de43cc65b44ab490572cc13dc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.30858
@@ -27919,10 +27886,6 @@ PrefabInstance:
     - target: {fileID: 138276, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Wood_Large_01_Snow (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 138276, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402186, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28758,10 +28721,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Stone_02_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 165502, guid: 7f38756f10a71554eabea174461a6033, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 443496, guid: 7f38756f10a71554eabea174461a6033, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.46541
@@ -28895,10 +28854,6 @@ PrefabInstance:
     - target: {fileID: 153292, guid: 970346f953bb5014ab233dc57c73bafb, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Hut_01_Snow (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 153292, guid: 970346f953bb5014ab233dc57c73bafb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967294
       objectReference: {fileID: 0}
     - target: {fileID: 441438, guid: 970346f953bb5014ab233dc57c73bafb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29526,10 +29481,6 @@ PrefabInstance:
     - target: {fileID: 187994, guid: c991633e88cc3df4c81a2bda12bd262c, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Fence_Wood_Pole_03_Snow (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 187994, guid: c991633e88cc3df4c81a2bda12bd262c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 433376, guid: c991633e88cc3df4c81a2bda12bd262c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31875,10 +31826,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Table_01_Snow (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 184312, guid: f48dac29000c5394d97dcf4bac6cb675, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 437980, guid: f48dac29000c5394d97dcf4bac6cb675, type: 3}
       propertyPath: m_LocalPosition.x
       value: 73.42857
@@ -32290,10 +32237,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Clay_Pot_01_Snow
       objectReference: {fileID: 0}
-    - target: {fileID: 116256, guid: 1061d47743dc9fa45ad56a0470d676fd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 442666, guid: 1061d47743dc9fa45ad56a0470d676fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62.17758
@@ -32477,6 +32420,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 6184237366804422112, guid: 346d2a1b4aa86de4889f01fab83d8e95,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346d2a1b4aa86de4889f01fab83d8e95, type: 3}
 --- !u!4 &1954731957 stripped
@@ -32575,10 +32523,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Roof_01_Snow (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 165180, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 483016, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.478577
@@ -32622,10 +32566,6 @@ PrefabInstance:
     - target: {fileID: 483016, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483016, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5180075
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd460a9361811747a2790d0174ef82d, type: 3}

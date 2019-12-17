@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 475272}
   - component: {fileID: 3331168}
   - component: {fileID: 2354550}
+  - component: {fileID: 9146353439257584166}
   m_Layer: 0
   m_Name: SM_Prop_Wheel_Barrow_01_Snow
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9146353439257584166
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 786ca84c503609d48b4b67bafd67a2a5, type: 3}

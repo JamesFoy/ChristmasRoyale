@@ -120,7 +120,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &1415192964
+--- !u!1001 &1134332346
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -130,12 +130,12 @@ PrefabInstance:
     - target: {fileID: 3308838028292336550, guid: 382ec2f2edafd424b82105ef3342eb2c,
         type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3308838028292437894, guid: 382ec2f2edafd424b82105ef3342eb2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7826916
+      value: 0.42045864
       objectReference: {fileID: 0}
     - target: {fileID: 3308838028292437894, guid: 382ec2f2edafd424b82105ef3342eb2c,
         type: 3}
@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 3308838028292437894, guid: 382ec2f2edafd424b82105ef3342eb2c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.2713175
+      value: 14.867679
       objectReference: {fileID: 0}
     - target: {fileID: 3308838028292437894, guid: 382ec2f2edafd424b82105ef3342eb2c,
         type: 3}
@@ -189,13 +189,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7634054925081750120, guid: 382ec2f2edafd424b82105ef3342eb2c,
         type: 3}
-      propertyPath: m_AssetId
-      value: 382ec2f2edafd424b82105ef3342eb2c
-      objectReference: {fileID: 0}
-    - target: {fileID: 7634054925081750120, guid: 382ec2f2edafd424b82105ef3342eb2c,
-        type: 3}
       propertyPath: m_SceneId
-      value: 844564296
+      value: 581375606
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 382ec2f2edafd424b82105ef3342eb2c, type: 3}

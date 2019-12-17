@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 491680}
   - component: {fileID: 3310766}
   - component: {fileID: 2356606}
+  - component: {fileID: 8073228149943869640}
   m_Layer: 0
   m_Name: SM_Prop_Crate_Base_01_Snow
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8073228149943869640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.326283, y: 0.5847386, z: 0.688061}
+  m_Center: {x: 0.000000447035, y: 0.2923693, z: 0.00054359453}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 444238}
   - component: {fileID: 3381234}
   - component: {fileID: 2331346}
+  - component: {fileID: 6064251097199272714}
   m_Layer: 0
   m_Name: SM_Env_Rock_04_Snow
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6064251097199272714
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 36c3f796e7a8d864393f47570c57f60f, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 480172}
   - component: {fileID: 3328838}
   - component: {fileID: 2315348}
+  - component: {fileID: 1594051286370138684}
   m_Layer: 0
   m_Name: SM_Bld_Base_Long_Door_02_Snow
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1594051286370138684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173448}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.573075, y: 2.308591, z: 6.838086}
+  m_Center: {x: -0.0000038146977, y: 1.1542954, z: 0.000015258789}

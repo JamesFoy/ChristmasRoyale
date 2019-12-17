@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 473718}
   - component: {fileID: 3334346}
   - component: {fileID: 2314664}
+  - component: {fileID: 7913025948545101970}
   m_Layer: 0
   m_Name: SM_Bld_Tower_Stone_Base_01_Snow
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7913025948545101970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.635044, y: 2.8444614, z: 2.629284}
+  m_Center: {x: 0.0022029877, y: 1.3474646, z: 0.00014305115}

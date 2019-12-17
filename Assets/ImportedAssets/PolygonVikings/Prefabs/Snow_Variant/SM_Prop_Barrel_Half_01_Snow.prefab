@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 483328}
   - component: {fileID: 3332652}
   - component: {fileID: 2338920}
+  - component: {fileID: 4222897837382293907}
   m_Layer: 0
   m_Name: SM_Prop_Barrel_Half_01_Snow
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4222897837382293907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.84252524, y: 0.5001726, z: 0.84253275}
+  m_Center: {x: 0.010927156, y: 0.2500863, z: 0.0000023841858}
