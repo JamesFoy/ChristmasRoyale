@@ -28,7 +28,7 @@ namespace Mirror
 
         [FormerlySerializedAs("m_ShowRoomGUI")]
         [SerializeField]
-        internal bool showRoomGUI = true;
+        public bool showRoomGUI = true;
 
         [FormerlySerializedAs("m_MinPlayers")]
         [SerializeField]

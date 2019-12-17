@@ -6,16 +6,20 @@ public class PresentCollect : MonoBehaviour
 {
     private Vector3 offset = new Vector3(0, 0.2f, 0);
     private static PresentCollect instance;
+    private float elapsedTime;
 
     [SerializeField] UnityEvent onCollectedPresent;
     [SerializeField] public UnityEvent onDroppedPresent;
-    [SerializeField] UnityEvent onPlantedPresent;
+    [SerializeField] UnityEvent onPresentExplode;
+    [SerializeField] UnityEvent onPresentPlanted;
+    [SerializeField] AudioSource bombClip;
 
     public static PresentCollect Instance {get { return instance; } }
 
     public float timerCountdown;
+    public float soundTimer;
 
-    public enum PresentState { notCollected, isCollected, hasDropped, planted };
+    public enum PresentState { notCollected, isCollected, hasDropped, planted, exploded };
     public PresentState presentState = PresentState.notCollected;
 
     // Start is called before the first frame update
@@ -48,6 +52,27 @@ public class PresentCollect : MonoBehaviour
         {
             //Start Countdown
             StartCoroutine(PresentCountDown(timerCountdown));
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= soundTimer)
+            {
+                elapsedTime = 0f;
+                bombClip.Play();
+            }
+            else
+            {
+                if (bombClip.isPlaying)
+                    return;
+
+                bombClip.Stop();
+            }
+
+            //Allow Defuse Mechanic
+            onPresentPlanted.Invoke();
+        }
+
+        if (presentState != PresentState.planted)
+        {
+            StopAllCoroutines();
         }
     }
 
@@ -55,6 +80,8 @@ public class PresentCollect : MonoBehaviour
     {
         //When Countdown ends play explosion effect
         yield return new WaitForSeconds(timer);
+        onPresentExplode.Invoke();
+        presentState = PresentState.exploded;
     }
 
     public void SetPresentPosition(Transform dropPoint)

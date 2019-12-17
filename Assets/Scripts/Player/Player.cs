@@ -1,6 +1,10 @@
 ﻿using UnityEngine.Events;
 using Mirror;
 using UnityEngine;
+using Unity.Collections;
+using System.Collections;
+using TMPro;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class ToggleEvent : UnityEvent<bool> { }
@@ -8,11 +12,15 @@ public class ToggleEvent : UnityEvent<bool> { }
 public class Player : NetworkBehaviour
 {
     [SyncVar (hook = "OnPresentCollected")] public bool hasPresent;
+    [SyncVar (hook = "OnNameChanged")] public string playerName;
 
     [SerializeField] ToggleEvent onToggleShared;
     [SerializeField] ToggleEvent onToggleLocal;
     [SerializeField] ToggleEvent onToggleRemote;
+    [SerializeField] UnityEvent onDeath;
     [SerializeField] float respawnTime = 5f;
+
+    static List<Player> players = new List<Player>();
 
     PresentCollect presentCollect;
     GameObject mainCamera;
@@ -25,6 +33,24 @@ public class Player : NetworkBehaviour
         presentCollect = PresentCollect.Instance;
 
         EnablePlayer();
+    }
+
+    [ServerCallback]
+    private void OnEnable()
+    {
+        if (!players.Contains(this))
+        {
+            players.Add(this);
+        }
+    }
+
+    [ServerCallback]
+    private void OnDisable()
+    {
+        if (players.Contains(this))
+        {
+            players.Remove(this);
+        }
     }
 
     private void Update()
@@ -45,7 +71,7 @@ public class Player : NetworkBehaviour
         if (isLocalPlayer)
         {
             mainCamera.SetActive(true);
-            //PlayerCanvas.canvas.HideReticule();
+            PlayerCanvas.Instance.HideReticule();
             onToggleLocal.Invoke(false);
         }
         else
@@ -61,7 +87,7 @@ public class Player : NetworkBehaviour
         if (isLocalPlayer)
         {
             mainCamera.SetActive(false);
-            //PlayerCanvas.canvas.Initialize();
+            PlayerCanvas.Instance.Initialize();
             onToggleLocal.Invoke(true);
         }
         else
@@ -74,10 +100,11 @@ public class Player : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
-            //PlayerCanvas.canvas.WriteGameStatusText ("You Died!");
-            //PlayerCanvas.canvas.PlayDeathAudio();
+            PlayerCanvas.Instance.WriteGameStatusText ("You Died!");
+            PlayerCanvas.Instance.PlayDeathAudio();
 
-            anim.SetTrigger("Died");
+            anim.SetTrigger("Die");
+            onDeath.Invoke();
         }
 
         //Drop Present if the player hasPresent was true;
@@ -90,11 +117,13 @@ public class Player : NetworkBehaviour
 
         DisablePlayer();
 
-        Invoke("Respawn", respawnTime);
+        StartCoroutine(Respawn(respawnTime));
     }
 
-    void Respawn()
+    IEnumerator Respawn(float respawnTime)
     {
+        yield return new WaitForSeconds(respawnTime);
+
         if (isLocalPlayer)
         {
             Transform spawn = NetworkManager.singleton.GetStartPosition();
@@ -103,6 +132,8 @@ public class Player : NetworkBehaviour
 
             anim.SetTrigger("Restart");
         }
+
+        yield return null;
 
         EnablePlayer();
     }
@@ -114,5 +145,51 @@ public class Player : NetworkBehaviour
         {
             //Display UI icon
         }
+    }
+
+    void OnNameChanged(string value)
+    {
+        playerName = value;
+        gameObject.name = playerName;
+        //set text
+        GetComponentInChildren<TMP_Text>(true).text = playerName;
+    }
+
+    [Server]
+    public void Won()
+    {
+        //tell other players
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].RpcGameOver(netIdentity, name);
+        }
+
+        Invoke("BackToLobby", 5f);
+    }
+
+    [ClientRpc]
+    void RpcGameOver(NetworkIdentity networkID, string name)
+    {
+        DisablePlayer();
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (isLocalPlayer)
+        {
+            if (netIdentity == networkID)
+            {
+                PlayerCanvas.Instance.WriteGameStatusText("You Won!");
+            }
+            else
+            {
+                PlayerCanvas.Instance.WriteGameStatusText("Game Over!\n" + name + " Won");
+            }
+        }
+    }
+
+    void BackToLobby()
+    {
+        FindObjectOfType<NetworkRoomManager>().ServerChangeScene("Lobby");
     }
 }

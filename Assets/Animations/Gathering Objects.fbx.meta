@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 32979a5c65fe46f4897c065581d68bf0
+guid: 680afdd9670a80f419355b4f72cd2967
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Dying
+    second: DefuseBomb
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Dying
+      name: DefuseBomb
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 170
+      lastFrame: 358
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

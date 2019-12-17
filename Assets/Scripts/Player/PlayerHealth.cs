@@ -49,7 +49,7 @@ public class PlayerHealth : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
-            //PlayerCanvas.canvas.FlashDamageEffect();
+            //PlayerCanvas.Instance.FlashDamageEffect();
         }
 
         if (died)
@@ -62,7 +62,7 @@ public class PlayerHealth : NetworkBehaviour
 
         if (isLocalPlayer)
         {
-            //PlayerCanvas.canvas.SetHealth(value);
+            //PlayerCanvas.Instance.SetHealth(value);
         }
     }
 }

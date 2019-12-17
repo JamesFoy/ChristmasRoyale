@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7762215612702245086}
-  - component: {fileID: 7762215612702245057}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -31,17 +30,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7762215612702245057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7762215612702245056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad1c20a10b5756d428443ae6c5781887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  matchSettings:
-    respawnTime: 3
