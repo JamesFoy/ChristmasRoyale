@@ -9,7 +9,6 @@ public class PlayerCanvas : MonoBehaviour
 {
     private static PlayerCanvas instance;
 
-    [SerializeField] TMP_Text gameTimerText;
     [SerializeField] GameObject killsInfo;
     [SerializeField] GameObject plantInfo;
     [SerializeField] GameObject reticule;
@@ -18,7 +17,6 @@ public class PlayerCanvas : MonoBehaviour
     [SerializeField] TMP_Text killsValue;
     [SerializeField] TMP_Text logText;
     [SerializeField] AudioSource deathAudio;
-    [SerializeField] float gameTimer;
 
     bool bombInZone;
 
@@ -39,7 +37,6 @@ public class PlayerCanvas : MonoBehaviour
 
     private void Reset()
     {
-        gameTimerText = GameObject.Find("GameTimerInfo").GetComponent<TMP_Text>();
         plantInfo = GameObject.Find("PlantInfo");
         reticule = GameObject.Find("Reticule");
         //damageImage = GameObject.Find("DamageFlash").GetComponent<UIFader>();
@@ -99,15 +96,6 @@ public class PlayerCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameTimer -= Time.deltaTime;
-
-        gameTimerText.text = gameTimer.ToString("F0");
-
-        if (gameTimer <= 0)
-        {
-            gameTimer = 0;
-        }
-
         if (bombInZone)
         {
             plantInfo.SetActive(true);

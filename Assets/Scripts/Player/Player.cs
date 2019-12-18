@@ -100,11 +100,13 @@ public class Player : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
+            onDeath.Invoke();
+
             PlayerCanvas.Instance.WriteGameStatusText ("You Died!");
             PlayerCanvas.Instance.PlayDeathAudio();
 
             anim.SetTrigger("Die");
-            onDeath.Invoke();
+
         }
 
         //Drop Present if the player hasPresent was true;

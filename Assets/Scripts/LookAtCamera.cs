@@ -15,7 +15,7 @@ public class LookAtCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (mainCamera != null)
+        if (mainCamera == null)
             return;
 
         transform.rotation = Quaternion.LookRotation(transform.position - mainCamera.position);

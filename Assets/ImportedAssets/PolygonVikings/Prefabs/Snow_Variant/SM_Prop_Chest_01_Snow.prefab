@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 417642}
   - component: {fileID: 3378132}
   - component: {fileID: 2351770}
+  - component: {fileID: 5548367763262442306}
   m_Layer: 0
   m_Name: SM_Prop_Chest_01_Snow
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5548367763262442306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2340125, y: 0.49385577, z: 0.7313853}
+  m_Center: {x: -0.0000003727122, y: 0.24692781, z: 0.0000033702872}
 --- !u!1 &160820
 GameObject:
   m_ObjectHideFlags: 0

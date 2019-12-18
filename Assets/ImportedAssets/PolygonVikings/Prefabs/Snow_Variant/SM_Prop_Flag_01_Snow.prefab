@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 480848}
   - component: {fileID: 3306326}
   - component: {fileID: 2302500}
+  - component: {fileID: 2986874409577551253}
   m_Layer: 0
   m_Name: SM_Prop_Flag_01_Snow
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2986874409577551253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.71380764, y: 4.8874435, z: 1.483333}
+  m_Center: {x: 0.000015005469, y: 2.4437218, z: -0.00646028}

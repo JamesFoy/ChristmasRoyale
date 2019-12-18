@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   m_AssetId: 
-  m_SceneId: 4164384375
+  m_SceneId: 2854379957
 --- !u!114 &8566048827578473356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,9 +1368,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.05
   hasPresent: 0
-  playerName: 
-  gameWinAudio: {fileID: 0}
-  gameLoseAudio: {fileID: 0}
+  playerName: Player
   onToggleShared:
     m_PersistentCalls:
       m_Calls:
@@ -1420,6 +1418,28 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1732862180530773}
         m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1725191842}
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3895053654539755253}
+        m_MethodName: set_enabled
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1495,18 +1515,7 @@ MonoBehaviour:
     m_TypeName: ToggleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onDeath:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1725191842}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   respawnTime: 5
@@ -1527,7 +1536,7 @@ MonoBehaviour:
   shotCooldown: 0.2
   firePosition: {fileID: 7913263539806510522}
   shotEffects: {fileID: 8712061326300939725}
-  killsToWin: 2
+  killsToWin: 25
   gunAnim: {fileID: 6201743367884316135}
 --- !u!114 &7535909192091737451
 MonoBehaviour:
